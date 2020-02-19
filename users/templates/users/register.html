@@ -7,7 +7,7 @@
 
 <form method="POST" class="login100-form validate-form flex-sb flex-w">
     <span class="login100-form-title p-b-32">
-        Login
+        Registro de estudiantes
     </span>
 
     {% csrf_token %}
@@ -63,12 +63,17 @@
 
     <div class="container-login100-form-btn">
         <button class="login100-form-btn">
-            Login
+            Enviar
         </button>
     </div>
-</form>
-<div class="pull-right">
-    <a href="{% url 'users:register' %}">Registrame</a>
-</div>
 
+</form>
+
+{% endblock %}
+
+
+{% block script %}
+<script>
+$("#id_username").attr("maxlength", "9")
+</script>
 {% endblock %}

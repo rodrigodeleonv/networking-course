@@ -134,7 +134,7 @@ USE_L10N = True
 USE_TZ = True
 
 LOGIN_URL = '/login/'
-# LOGIN_REDIRECT_URL = 'web:home'
+LOGIN_REDIRECT_URL = 'web:home'
 LOGOUT_REDIRECT_URL = 'login'
 
 STATIC_URL = '/static/'

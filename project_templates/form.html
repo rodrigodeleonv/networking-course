@@ -1,0 +1,40 @@
+{% load widget_tweaks %}
+
+{% comment %}
+    Parameters:
+        1. form
+{% endcomment %}
+
+{% for hidden in form.hidden_fields %}
+    {{ hidden }}
+{% endfor %}
+
+{% if form.non_field_errors %}
+<div class="alert alert-danger">
+    {% render_field form.non_field_errors %}
+</div>
+{% endif %}
+
+{% for field in form.visible_fields %}
+<div class="form-group">						
+    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+    {% if form.is_bound %}
+        {% if field.errors %}
+            {% render_field field class="form-control is-invalid mr-1" %}
+        {% else %}
+            {% render_field field class="form-control is-valid mr-1" %}
+        {% endif %}
+    {% else %}
+        {% render_field field class="form-control ml-1 mr-1" %}
+    {% endif %}
+    
+
+    {% for error in field.errors %}
+    <span style="color:red;">{{ error }}</span>
+    {% endfor %}		
+            
+    {% if field.help_text %}
+    <small class="form-text text-muted"><em>{{ field.help_text|safe }}</em></small>
+    {% endif %}							
+</div>
+{% endfor %}
