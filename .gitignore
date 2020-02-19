@@ -127,3 +127,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+redes/environconf/config.json

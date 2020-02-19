@@ -1,0 +1,10 @@
+{
+    "python.pythonPath": "env/bin/python3",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        // "--ignore=E302,E303,E115,E117,E203,E231,E221,E222,E223,E262,E265,E501,W191,W291,W293,W503,W504"
+        "--ignore=E501"
+    ], 
+    "python.linting.enabled": true
+}

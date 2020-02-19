@@ -1,0 +1,10 @@
+{
+    "local": {
+        "DEBUG": true,
+        "SECRET_KEY": "^(o=iql=irufqd5*^xd^4oej8jq$^t6zv+y0n2b0s5*-_%4amk"
+    },
+    "production": {
+        "DEBUG": false,
+        "SECRET_KEY": "^(o=iql=irufqd5*^xd^4oej8jq$^t6zv+y0n2b0s5*-_%4amk"
+    }
+}
