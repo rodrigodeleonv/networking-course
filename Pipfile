@@ -10,6 +10,9 @@ django = "*"
 django-widget-tweaks = "*"
 django-extensions = "*"
 flake8 = "*"
+pandas = "*"
+openpyxl = "*"
+celery = "*"
 
 [requires]
 python_version = "3.7"

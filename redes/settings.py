@@ -34,7 +34,7 @@ SECRET_KEY = conf_en['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = conf_en['DEBUG']
 
-ALLOWED_HOSTS = ['rodrigodeleon.com']
+ALLOWED_HOSTS = ['rodrigodeleon.com', 'localhost']
 
 
 # Application definition
@@ -51,7 +51,9 @@ INSTALLED_APPS = [
     'widget_tweaks',
     # My apps
     'users',
-
+    'web',
+    'homework',
+    'reporters',
 ]
 
 MIDDLEWARE = [
@@ -151,4 +153,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'MEDIA_ROOT')
 # EMAIL_HOST_PASSWORD = 'password'
 # EMAIL_USE_TLS = True
 
-# AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.User'
